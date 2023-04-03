@@ -1,2 +1,2 @@
 # Rotifer_phylogeny
-custom scripts used in the article rotifer phylogeny
+custom scripts used to infer the syndermatan/rotiferan phylogeny
