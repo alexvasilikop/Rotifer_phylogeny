@@ -8,8 +8,8 @@ from ete3 import Tree
 
 
 # Takes as input trees and corresponding unaligned orthogroup sequences (fasta) for which only one 
-#target group of species have multiple copies (e.g. clade Bdelloidea of rotifera); Check that sequences 
-#of target clade are monophyletic. Prune trees to keep target sequences and their corresponding fasta files 
+# target group of species have multiple copies (e.g. clade Bdelloidea of Rotifera); First check that sequences 
+# of target clade are monophyletic in the gene tree. Then prune target trees to keep target clade sequences and their corresponding fasta files 
 
 def make_out_dir(path):
 
@@ -95,7 +95,7 @@ def main():
 		#Check that multiple copies of the target species are monophyletic
 		if t.check_monophyly(values=[k for k in heads_seqs_target.keys()], target_attr="name")[1]=='monophyletic':
 			
-			print("Tree includes monophyletic copies of the target species: "+treefile)
+			print("Tree includes monophyletic copies of the target clade species: "+treefile)
 
 			print("Pruning the tree to remove non-target clade species: "+treefile)
 
